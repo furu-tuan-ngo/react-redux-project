@@ -22,6 +22,15 @@ const hobbyReducer = (state = initialState, action) => {
     case "SET_ACTIVE_HOBBY":
       return state;
 
+    case "REMOVE_HOBBY":
+      const listHobby = [...state.list];
+      const newListHobby = listHobby.filter(
+        (hobby) => hobby.id !== action.payload.id
+      );
+      return {
+        ...state,
+        list: newListHobby,
+      };
     default:
       return state;
   }
