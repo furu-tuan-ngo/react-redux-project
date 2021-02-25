@@ -11,3 +11,10 @@ export const setActiveHobby = (hobby) => {
     payload: hobby,
   };
 };
+
+export const removeHobby = (hobby) => {
+  return {
+    type: "REMOVE_HOBBY",
+    payload: hobby,
+  };
+};
